@@ -1,0 +1,12 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  pre:
+    # Build the dotnet core apps inside the aspnetcore-build container.
+    - docker run -v `pwd`:/sln --workdir /sln microsoft/aspnetcore-build sh build.sh
+  override:
+    # Build the docker images.
+    - docker build --rm=false -t dotnetcore-container-web ./Web
+    - docker build --rm=false -t dotnetcore-container-api ./Api
