@@ -1,9 +1,9 @@
-## How to run drone Continuous Integration (CI) with dotnet core
+# How to run drone Continuous Integration (CI) with dotnet core
 
-# drone-dotnetcore
+## drone-dotnetcore
 lab showcasing drone CI/CD with .NET core Web, WebAPI, Library, and console projects
 
-# manual process:
+## manual process:
 ```
 # Build container
 cd Web
@@ -12,9 +12,9 @@ docker build -t dinorows/core-container .
 docker run -p 8080:80 --rm -it dinorowscore-container
 ```
 
-# automated process (using drone ci):
+## automated process (using drone ci):
 just use the .drone.yml file! As soon as there is a git update, drone ci is going to run and do
 the steps in .drone.yml
 
-# Note
+## Note
 To use drone secrets instead of a temporary access token from cloud.drone.io, use the format in .drone-2.yaml!
