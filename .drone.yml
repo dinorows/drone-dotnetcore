@@ -3,11 +3,11 @@ name: default
 
 steps:
 - name: compile
-    image: microsoft/aspnetcore-build
-    commands:
-      - sh build.sh
+  image: microsoft/aspnetcore-build
+  commands:
+    - sh build.sh
 
 - name: build-image:
-    image: microsoft/aspnetcore-build
-    command:
-      - docker build -t dinorows/dotnetcore-container ./Web
+  image: microsoft/aspnetcore-build
+  command:
+    - docker build -t dinorows/dotnetcore-container ./Web
