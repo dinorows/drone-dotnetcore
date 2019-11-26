@@ -4,8 +4,8 @@ steps:
 - name: compile
   image: microsoft/aspnetcore-build
   commands:
-    - sh build.sh
+  - sh build.sh
 - name: build-image:
   image: microsoft/aspnetcore-build
   command:
-    - docker build -t dinorows/dotnetcore-container ./Web
+  - docker build -t dinorows/dotnetcore-container ./Web
