@@ -1,12 +1,16 @@
 kind: pipeline
-name: yadayada
 
 steps:
 - name: compile
-  image: microsoft/aspnetcore-build
+  image: microsoft/dotnet:sdk
   commands:
-  - sh build.sh
-- name: build-image:
-  image: microsoft/aspnetcore-build
-  commands:
-  - docker build -t dinorows/dotnetcore-container ./Web
+    - sh build.sh
+- name: build-image
+  image: plugins/docker
+  settings:
+    username: dinorows
+    password: 56a48100-46e4-478b-a420-882c497bfe9b
+    repo: dinorows/dotnetcore-container
+    dockerfile: Web/Dockerfile
+
+
