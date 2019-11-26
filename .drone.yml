@@ -9,7 +9,7 @@ steps:
   image: plugins/docker
   settings:
     username: dinorows
-    password: 56a48100-46e4-478b-a420-882c497bfe9b
+    password: <please-use-your-own-access-token-here>
     repo: dinorows/dotnetcore-container
     dockerfile: Web/Dockerfile
 
