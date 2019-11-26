@@ -1,4 +1,5 @@
 kind: pipeline
+name: yadayada
 
 steps:
 - name: compile
@@ -7,5 +8,5 @@ steps:
   - sh build.sh
 - name: build-image:
   image: microsoft/aspnetcore-build
-  command:
+  commands:
   - docker build -t dinorows/dotnetcore-container ./Web
