@@ -1,1 +1,15 @@
+kind: pipeline
 
+steps:
+- name: compile
+  image: microsoft/dotnet:sdk
+  commands:
+    - sh build.sh
+- name: build-image
+  image: plugins/docker
+  settings:
+    username: dinorows
+    password:
+      from_secret: my-drone-secret
+    repo: dinorows/dotnetcore-container
+    dockerfile: Web/Dockerfile
