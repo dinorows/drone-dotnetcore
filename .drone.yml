@@ -5,7 +5,6 @@ steps:
   image: microsoft/aspnetcore-build
   commands:
     - sh build.sh
-
 - name: build-image:
   image: microsoft/aspnetcore-build
   command:
