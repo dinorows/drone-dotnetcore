@@ -10,4 +10,4 @@ docker build -t dinorows/core-container .
 docker run -p 8080:80 --rm -it dinorowscore-container
 ```
 
-Note: to use drone secrets instead of a temporray access token, use the format in .drone-2.yaml!
+Note: to use drone secrets instead of a temporary access token, use the format in .drone-2.yaml!
