@@ -1,4 +1,4 @@
-# How to run drone Continuous Integration (CI) with dotnet core
+# How to run drone CI with dotnet core
 
 ## drone-dotnetcore
 lab showcasing drone CI/CD with .NET core Web, WebAPI, Library, and console projects
