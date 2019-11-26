@@ -5,4 +5,4 @@ pipeline:
             - sh build.sh
     build-image:
         command:
-            - docker build -t dotnetcore-container ./Web
+            - docker build -t dinorows/dotnetcore-container ./Web
