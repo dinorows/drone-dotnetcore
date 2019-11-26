@@ -1,8 +1,13 @@
-pipeline:
-    compile:
-        image: microsoft/aspnetcore-build
-        commands:
-            - sh build.sh
-    build-image:
-        command:
-            - docker build -t dinorows/dotnetcore-container ./Web
+kind: pipeline
+name: default
+
+steps:
+- name: compile
+    image: microsoft/aspnetcore-build
+    commands:
+      - sh build.sh
+
+- name: build-image:
+    image: microsoft/aspnetcore-build
+    command:
+      - docker build -t dinorows/dotnetcore-container ./Web
