@@ -1,0 +1,8 @@
+pipeline:
+    compile:
+        image: microsoft/aspnetcore-build
+        commands:
+            - sh build.sh
+    build-image:
+        command:
+            - docker build -t dotnetcore-container ./Web
